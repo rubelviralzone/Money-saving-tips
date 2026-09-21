@@ -1,1 +1,1134 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SaveWise Deals — Smart Ways to Save Money</title>
+
+<meta name="description"
+content="Discover money-saving tips, shopping deals, discounts and useful ways to save more on everyday purchases.">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#111827">
+
+<meta property="og:title" content="SaveWise Deals — Smart Ways to Save Money">
+<meta property="og:description"
+content="Discover useful money-saving tips, deals and discounts.">
+<meta property="og:type" content="website">
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f7fb;
+    color:#172033;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:min(1120px,92%);
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    background:#ffffff;
+    border-bottom:1px solid #e8ebf2;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.nav{
+    min-height:68px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.logo{
+    font-size:23px;
+    font-weight:800;
+    color:#111827;
+}
+
+.logo span{
+    color:#16a34a;
+}
+
+.nav-links{
+    display:flex;
+    gap:22px;
+    align-items:center;
+}
+
+.nav-links a{
+    color:#4b5563;
+    font-size:14px;
+    font-weight:600;
+}
+
+.nav-btn{
+    background:#16a34a;
+    color:white !important;
+    padding:10px 16px;
+    border-radius:9px;
+}
+
+/* HERO */
+
+.hero{
+    padding:72px 0 55px;
+    background:
+    radial-gradient(circle at 90% 20%,#dcfce7 0,transparent 30%),
+    linear-gradient(135deg,#ffffff,#f0fdf4);
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    align-items:center;
+    gap:45px;
+}
+
+.badge{
+    display:inline-block;
+    background:#dcfce7;
+    color:#15803d;
+    padding:7px 13px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:clamp(38px,6vw,64px);
+    line-height:1.05;
+    letter-spacing:-2px;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#16a34a;
+}
+
+.hero p{
+    font-size:18px;
+    color:#5b6472;
+    max-width:650px;
+    margin-bottom:28px;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 21px;
+    border-radius:10px;
+    font-weight:700;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-primary{
+    background:#16a34a;
+    color:#fff;
+}
+
+.btn-secondary{
+    background:#fff;
+    color:#172033;
+    border:1px solid #dce1e8;
+}
+
+/* SAVING CARD */
+
+.saving-card{
+    background:#111827;
+    color:white;
+    padding:30px;
+    border-radius:24px;
+    box-shadow:0 25px 50px rgba(0,0,0,.14);
+}
+
+.saving-card .big{
+    font-size:52px;
+    font-weight:900;
+    color:#86efac;
+}
+
+.saving-card h3{
+    margin:5px 0 8px;
+}
+
+.saving-card p{
+    color:#cbd5e1;
+}
+
+.mini-stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:24px;
+}
+
+.stat{
+    background:#1f2937;
+    padding:15px;
+    border-radius:12px;
+}
+
+.stat strong{
+    display:block;
+    font-size:20px;
+}
+
+/* AD SLOT */
+
+.ad-slot{
+    margin:28px auto;
+    min-height:90px;
+    border:1px dashed #cbd5e1;
+    background:#fff;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#94a3b8;
+    font-size:12px;
+    padding:15px;
+}
+
+.ad-slot span{
+    display:block;
+}
+
+/* SECTION */
+
+section{
+    padding:65px 0;
+}
+
+.section-title{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 38px;
+}
+
+.section-title h2{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#667085;
+}
+
+/* DEALS */
+
+.deals{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.deal{
+    background:#fff;
+    border:1px solid #e7eaf0;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.2s;
+}
+
+.deal:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.deal-image{
+    height:160px;
+    background:linear-gradient(135deg,#dcfce7,#bbf7d0);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:58px;
+}
+
+.deal-content{
+    padding:21px;
+}
+
+.tag{
+    display:inline-block;
+    background:#fef3c7;
+    color:#92400e;
+    padding:5px 9px;
+    border-radius:6px;
+    font-size:11px;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+.deal h3{
+    margin-bottom:7px;
+}
+
+.deal p{
+    color:#697386;
+    font-size:14px;
+    margin-bottom:17px;
+}
+
+.deal-btn{
+    display:block;
+    text-align:center;
+    background:#111827;
+    color:white;
+    padding:11px;
+    border-radius:9px;
+    font-weight:700;
+}
+
+/* TIPS */
+
+.tips{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.tip{
+    background:#fff;
+    padding:25px;
+    border-radius:17px;
+    border:1px solid #e7eaf0;
+}
+
+.tip-icon{
+    font-size:34px;
+    margin-bottom:13px;
+}
+
+.tip h3{
+    margin-bottom:8px;
+}
+
+.tip p{
+    color:#697386;
+    font-size:14px;
+}
+
+/* SMART LINK */
+
+.smart{
+    background:#111827;
+    color:white;
+    border-radius:24px;
+    padding:45px;
+    text-align:center;
+}
+
+.smart h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.smart p{
+    color:#cbd5e1;
+    max-width:650px;
+    margin:0 auto 25px;
+}
+
+.smart-btn{
+    display:inline-block;
+    background:#22c55e;
+    color:white;
+    padding:14px 25px;
+    border-radius:10px;
+    font-weight:800;
+}
+
+/* NEWSLETTER */
+
+.newsletter{
+    background:#ecfdf5;
+}
+
+.newsletter-box{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+}
+
+.newsletter h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.newsletter p{
+    color:#667085;
+    margin-bottom:22px;
+}
+
+.email-form{
+    display:flex;
+    gap:10px;
+}
+
+.email-form input{
+    flex:1;
+    padding:14px;
+    border:1px solid #d8dee8;
+    border-radius:9px;
+    outline:none;
+}
+
+.email-form button{
+    border:0;
+    background:#16a34a;
+    color:#fff;
+    padding:14px 20px;
+    border-radius:9px;
+    font-weight:700;
+}
+
+/* FAQ */
+
+.faq{
+    max-width:800px;
+    margin:auto;
+}
+
+details{
+    background:#fff;
+    margin-bottom:12px;
+    padding:18px 20px;
+    border-radius:11px;
+    border:1px solid #e7eaf0;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:700;
+}
+
+details p{
+    color:#667085;
+    padding-top:12px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111827;
+    color:#cbd5e1;
+    padding:45px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:35px;
+}
+
+footer h3{
+    color:white;
+    margin-bottom:12px;
+}
+
+footer a{
+    color:#cbd5e1;
+    display:block;
+    margin:7px 0;
+    font-size:14px;
+}
+
+.disclaimer{
+    margin-top:30px;
+    padding-top:20px;
+    border-top:1px solid #374151;
+    font-size:12px;
+    color:#94a3b8;
+}
+
+.copyright{
+    margin-top:20px;
+    text-align:center;
+    font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        padding:50px 0 40px;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .deals,
+    .tips{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .smart{
+        padding:32px 20px;
+    }
+
+    .email-form{
+        flex-direction:column;
+    }
+
+    section{
+        padding:48px 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+<div class="container nav">
+
+<a href="#" class="logo">
+SaveWise<span>Deals</span>
+</a>
+
+<nav class="nav-links">
+<a href="#deals">Deals</a>
+<a href="#tips">Saving Tips</a>
+<a href="#faq">FAQ</a>
+<a href="#newsletter" class="nav-btn">Get Deals</a>
+</nav>
+
+</div>
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<span class="badge">💰 Smart Savings • Better Shopping</span>
+
+<h1>
+Spend Less.<br>
+<span>Save More.</span>
+</h1>
+
+<p>
+Discover useful money-saving ideas, shopping deals,
+discount opportunities and practical ways to keep more
+money in your pocket.
+</p>
+
+<div class="buttons">
+
+<a href="#deals" class="btn btn-primary">
+🔥 Explore Deals
+</a>
+
+<a href="#tips" class="btn btn-secondary">
+💡 Saving Tips
+</a>
+
+</div>
+
+</div>
+
+
+<div class="saving-card">
+
+<div class="big">SAVE</div>
+
+<h3>Small savings add up.</h3>
+
+<p>
+Compare prices, look for discounts and make smarter
+shopping decisions.
+</p>
+
+<div class="mini-stats">
+
+<div class="stat">
+<strong>🏷️ Deals</strong>
+<span>Discount ideas</span>
+</div>
+
+<div class="stat">
+<strong>💡 Tips</strong>
+<span>Money-saving ideas</span>
+</div>
+
+<div class="stat">
+<strong>🛒 Shopping</strong>
+<span>Better choices</span>
+</div>
+
+<div class="stat">
+<strong>💰 Budget</strong>
+<span>Spend wisely</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     BANNER AD SLOT
+     PASTE ADVERTICA BANNER CODE BELOW
+========================= -->
+
+<div class="container">
+
+<div class="ad-slot">
+
+<span>
+ADVERTISEMENT<br>
+<!-- PASTE YOUR ADVERTICA BANNER CODE HERE -->
+</span>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     DEALS
+========================= -->
+
+<section id="deals">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>🔥 Featured Savings</h2>
+
+<p>
+Explore popular ways shoppers can potentially save money.
+Always check the final price and terms before purchasing.
+</p>
+
+</div>
+
+
+<div class="deals">
+
+
+<div class="deal">
+
+<div class="deal-image">🛒</div>
+
+<div class="deal-content">
+
+<span class="tag">SHOPPING</span>
+
+<h3>Everyday Shopping</h3>
+
+<p>
+Simple strategies for finding better prices on everyday products.
+</p>
+
+<a href="#smartlink" class="deal-btn">
+View Opportunity →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="deal">
+
+<div class="deal-image">🏷️</div>
+
+<div class="deal-content">
+
+<span class="tag">DISCOUNTS</span>
+
+<h3>Discount Hunting</h3>
+
+<p>
+Learn how to compare prices and look for available discounts.
+</p>
+
+<a href="#smartlink" class="deal-btn">
+Explore →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="deal">
+
+<div class="deal-image">💳</div>
+
+<div class="deal-content">
+
+<span class="tag">SMART SPENDING</span>
+
+<h3>Spend Smarter</h3>
+
+<p>
+Useful ideas for avoiding unnecessary purchases and saving money.
+</p>
+
+<a href="#smartlink" class="deal-btn">
+Discover →
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+
+</section>
+
+
+<!-- =========================
+     SAVING TIPS
+========================= -->
+
+<section id="tips">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>💡 Simple Ways to Save</h2>
+
+<p>
+A few practical habits can make everyday spending more efficient.
+</p>
+
+</div>
+
+
+<div class="tips">
+
+<div class="tip">
+
+<div class="tip-icon">🔎</div>
+
+<h3>Compare Prices</h3>
+
+<p>
+Before buying, compare prices from multiple retailers and
+check the final cost including shipping and taxes.
+</p>
+
+</div>
+
+
+<div class="tip">
+
+<div class="tip-icon">🏷️</div>
+
+<h3>Look for Discounts</h3>
+
+<p>
+Check whether legitimate coupons, promotions or seasonal
+offers are available before completing a purchase.
+</p>
+
+</div>
+
+
+<div class="tip">
+
+<div class="tip-icon">🧾</div>
+
+<h3>Check the Final Price</h3>
+
+<p>
+A discount is only useful when the final price and terms
+actually make sense for your budget.
+</p>
+
+</div>
+
+
+</div>
+</div>
+
+</section>
+
+
+<!-- =========================
+     SMART LINK AREA
+     PASTE ADVERTICA SMART LINK
+========================= -->
+
+<section id="smartlink">
+
+<div class="container">
+
+<div class="smart">
+
+<h2>🎯 Looking for More Savings?</h2>
+
+<p>
+Explore the latest opportunities and discover offers that
+may help you save on products and services.
+</p>
+
+
+<!-- ==========================================
+     ADVERTICA SMART LINK
+     REPLACE THE # BELOW WITH YOUR REAL SMART LINK
+========================================== -->
+
+<a
+href="#"
+class="smart-btn"
+target="_blank"
+rel="nofollow sponsored noopener"
+>
+👉 Explore Today's Offers
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SECOND BANNER AD
+========================= -->
+
+<div class="container">
+
+<div class="ad-slot">
+
+<span>
+
+ADVERTISEMENT<br>
+
+<!-- PASTE YOUR SECOND ADVERTICA BANNER CODE HERE -->
+
+</span>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     NEWSLETTER
+========================= -->
+
+<section id="newsletter" class="newsletter">
+
+<div class="container">
+
+<div class="newsletter-box">
+
+<h2>📩 Get Money-Saving Ideas</h2>
+
+<p>
+Join our deal updates and discover useful shopping and
+saving ideas.
+</p>
+
+<form class="email-form"
+onsubmit="subscribeMessage(event)">
+
+<input
+type="email"
+placeholder="Enter your email"
+required
+>
+
+<button type="submit">
+Subscribe
+</button>
+
+</form>
+
+<p id="form-message"
+style="margin-top:12px;font-size:13px;">
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section id="faq">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>❓ Frequently Asked Questions</h2>
+
+<p>Some common questions about SaveWise Deals.</p>
+
+</div>
+
+
+<div class="faq">
+
+<details>
+
+<summary>Is SaveWise Deals a retailer?</summary>
+
+<p>
+No. SaveWise Deals is an informational website that may
+highlight shopping opportunities, savings ideas and
+third-party offers.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Are all deals guaranteed to be available?</summary>
+
+<p>
+No. Prices, availability, promotions and terms can change.
+Always verify the information on the merchant's website
+before purchasing.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Can I save money by comparing prices?</summary>
+
+<p>
+Comparing prices can help you understand available options.
+However, the lowest advertised price is not always the
+best overall value.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Does SaveWise Deals use advertising?</summary>
+
+<p>
+Yes. This website may display advertisements and promotional
+links from third-party advertising or affiliate partners.
+</p>
+
+</details>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>SaveWise Deals</h3>
+
+<p>
+Smart shopping ideas, savings tips and useful opportunities
+to help you make more informed purchasing decisions.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Explore</h3>
+
+<a href="#deals">Deals</a>
+<a href="#tips">Saving Tips</a>
+<a href="#faq">FAQ</a>
+<a href="#newsletter">Newsletter</a>
+
+</div>
+
+
+<div>
+
+<h3>Information</h3>
+
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms</a>
+<a href="disclaimer.html">Disclaimer</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+
+<div class="disclaimer">
+
+<strong>Advertising & Affiliate Disclosure:</strong>
+
+Some links or advertisements on SaveWise Deals may be
+provided by third-party advertising or affiliate partners.
+If you interact with certain promotional links, the website
+owner may receive compensation. This does not increase the
+price you pay. Offers, prices, availability and terms may
+change at any time. Always verify details with the original
+merchant or service provider.
+
+</div>
+
+
+<div class="copyright">
+
+© <span id="year"></span> SaveWise Deals. All rights reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- =========================
+     POPUNDER AREA
+     PASTE ONLY THE OFFICIAL
+     ADVERTICA CODE HERE
+========================= -->
+
+<!--
+=================================================
+ADVERTICA POPUNDER CODE
+PASTE YOUR OFFICIAL CODE HERE
+=================================================
+-->
+
+
+<script>
+
+/* Current year */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+/* Newsletter demo */
+
+function subscribeMessage(event){
+
+event.preventDefault();
+
+document.getElementById("form-message").textContent =
+"Thanks! Email subscription will be connected when an email service is added.";
+
+}
+
+
+/* Smooth internal links */
+
+document.querySelectorAll('a[href^="#"]').forEach(function(link){
+
+link.addEventListener("click",function(e){
+
+const target = document.querySelector(
+this.getAttribute("href")
+);
+
+if(target){
+
+e.preventDefault();
+
+target.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
